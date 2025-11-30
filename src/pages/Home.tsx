@@ -30,7 +30,7 @@ export const Home = () => {
             Bienvenido
           </h1>
           <p className="text-xl text-gray-600">
-            Comienza tu experiencia con nuestra aplicación
+            Aprende de Git
           </p>
         </div>
 
@@ -67,8 +67,8 @@ export const Home = () => {
 
         {/* Descripción adicional */}
         <p className="text-sm text-gray-500 max-w-md mx-auto">
-          Haz clic en el botón para iniciar el tutorial interactivo que te
-          guiará a través de las funcionalidades principales
+          Haz clic en el botón para iniciar el tutorial interactivo sobre
+          Git y aprender los conceptos fundamentales del control de versiones
         </p>
       </div>
     </div>
