@@ -1,0 +1,4 @@
+export { Home } from './Home';
+export { Comenzar } from './Comenzar';
+export { DetalleAlgoritmo } from './DetalleAlgoritmo';
+
