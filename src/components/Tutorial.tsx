@@ -10,23 +10,23 @@ interface TutorialStep {
 const tutorialSteps: TutorialStep[] = [
   {
     id: 1,
-    title: 'Paso 1',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+    title: '¿Qué es Git?',
+    content: 'Git es un sistema de control de versiones distribuido que te permite rastrear cambios en tu código a lo largo del tiempo. Creado por Linus Torvalds en 2005, Git se ha convertido en el estándar de la industria para el desarrollo de software colaborativo. Con Git, puedes mantener un historial completo de tu proyecto, trabajar en diferentes características simultáneamente mediante ramas, y colaborar con otros desarrolladores de manera eficiente. Cada desarrollador tiene una copia completa del repositorio, lo que permite trabajar sin conexión y proporciona redundancia natural.',
   },
   {
     id: 2,
-    title: 'Paso 2',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    title: 'Conceptos Fundamentales',
+    content: 'Git maneja tres áreas principales: el Working Directory (directorio de trabajo), el Staging Area (área de preparación) y el Repository (repositorio). El Working Directory es donde editas tus archivos. El Staging Area es donde preparas los cambios que quieres confirmar. El Repository es donde Git almacena permanentemente los cambios confirmados. Además, existen conceptos clave como commits (instantáneas de tu proyecto), branches (ramas para desarrollo paralelo), y merges (fusión de ramas). Entender estas áreas y conceptos es fundamental para usar Git efectivamente.',
   },
   {
     id: 3,
-    title: 'Paso 3',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.',
+    title: 'Flujo de Trabajo Básico',
+    content: 'El flujo de trabajo típico en Git sigue estos pasos: 1) Modificas archivos en tu directorio de trabajo. 2) Agregas selectivamente los cambios que quieres incluir al staging area usando "git add". 3) Confirmas los cambios con "git commit", creando una instantánea permanente en tu repositorio local. 4) Sincronizas tus cambios con un repositorio remoto usando "git push". Para obtener cambios de otros, usas "git pull". Este ciclo se repite constantemente durante el desarrollo. Es importante escribir mensajes de commit descriptivos que expliquen qué cambios se realizaron y por qué.',
   },
   {
     id: 4,
-    title: 'Paso 4',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi.',
+    title: 'Trabajo Colaborativo',
+    content: 'Git facilita el trabajo en equipo mediante ramas y repositorios remotos como GitHub, GitLab o Bitbucket. Cada desarrollador puede crear ramas para trabajar en nuevas características sin afectar el código principal. Los Pull Requests permiten revisar código antes de integrarlo. Los conflictos ocurren cuando dos personas modifican las mismas líneas de código, pero Git proporciona herramientas para resolverlos. Estrategias como Git Flow definen cómo organizar ramas (main, develop, feature, hotfix). La clave es comunicación, commits frecuentes con mensajes claros, y revisión de código constante.',
   },
 ];
 

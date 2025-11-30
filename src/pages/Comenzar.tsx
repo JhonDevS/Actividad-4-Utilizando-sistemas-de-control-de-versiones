@@ -12,42 +12,42 @@ export const Comenzar = () => {
   const [inputValue, setInputValue] = useState('');
   const navigate = useNavigate();
 
-  // Datos de ejemplo para el catálogo de algoritmos
-  const algoritmos = [
+  // Comandos de Git para el catálogo
+  const comandosGit = [
     {
       id: 1,
-      nombre: 'Algoritmo 1',
-      descripcion: 'Este es el algoritmo número 1, diseñado para resolver problemas específicos en el ámbito de la computación. Utiliza una estrategia de divide y vencerás optimizada.',
+      nombre: 'git init',
+      descripcion: 'Inicializa un nuevo repositorio Git en el directorio actual. Este comando crea una carpeta oculta .git que contiene toda la estructura necesaria para el control de versiones. Es el primer paso para comenzar a usar Git en un proyecto nuevo.',
     },
     {
       id: 2,
-      nombre: 'Algoritmo 2',
-      descripcion: 'El Algoritmo 2 es una solución optimizada para procesamiento rápido de datos en tiempo real. Utiliza técnicas avanzadas de caché y prefetching.',
+      nombre: 'git clone',
+      descripcion: 'Clona un repositorio remoto existente en tu máquina local. Descarga todo el historial del proyecto y crea una copia completa del repositorio. Es útil cuando quieres contribuir a un proyecto existente o trabajar en una copia de un repositorio remoto.',
     },
     {
       id: 3,
-      nombre: 'Algoritmo 3',
-      descripcion: 'Algoritmo 3 ofrece la mejor precisión y rendimiento en su categoría. Basado en técnicas de machine learning y optimización heurística.',
+      nombre: 'git add',
+      descripcion: 'Agrega archivos al área de staging (preparación). Este comando marca los cambios que quieres incluir en tu próximo commit. Puedes agregar archivos específicos, directorios completos, o usar patrones para seleccionar múltiples archivos a la vez.',
     },
     {
       id: 4,
-      nombre: 'Algoritmo 4',
-      descripcion: 'El Algoritmo 4 es una solución versátil y eficiente para múltiples escenarios. Su diseño flexible permite adaptarse a diferentes tipos de problemas.',
+      nombre: 'git commit',
+      descripcion: 'Confirma los cambios del staging area y los guarda en el repositorio local. Cada commit crea una instantánea permanente de tu proyecto con un mensaje descriptivo. Los commits son la unidad básica del historial de Git y deben ser atómicos y con mensajes claros.',
     },
     {
       id: 5,
-      nombre: 'Algoritmo 5',
-      descripcion: 'Algoritmo 5 representa tecnología de última generación en computación moderna. Incorpora los últimos avances en teoría de algoritmos.',
+      nombre: 'git push',
+      descripcion: 'Envía tus commits locales a un repositorio remoto. Este comando sincroniza tu trabajo con el servidor, permitiendo que otros desarrolladores accedan a tus cambios. Es importante hacer pull antes de push para evitar conflictos con cambios remotos.',
     },
     {
       id: 6,
-      nombre: 'Algoritmo 6',
-      descripcion: 'El Algoritmo 6 está diseñado específicamente para escalabilidad máxima. Implementa técnicas de sharding y distribución automática de carga.',
+      nombre: 'git pull',
+      descripcion: 'Descarga y fusiona cambios del repositorio remoto a tu rama actual. Es una combinación de git fetch (descarga) y git merge (fusiona). Mantiene tu repositorio local actualizado con los últimos cambios del equipo y es fundamental en el trabajo colaborativo.',
     },
   ];
 
-  const handleAlgoritmoClick = (id: number) => {
-    navigate(`/algoritmo/${id}`);
+  const handleComandoClick = (id: number) => {
+    navigate(`/comando/${id}`);
   };
 
   const handleInputSubmit = () => {
@@ -64,27 +64,28 @@ export const Comenzar = () => {
   const tabs: TabItem[] = [
     {
       id: 'catalogo',
-      label: 'Elegir Algoritmo del Catálogo',
+      label: 'Comandos de Git',
       content: (
         <div>
           <div className="mb-6">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">
-              Catálogo de Algoritmos
+              Catálogo de Comandos Git
             </h2>
             <p className="text-gray-600">
-              Aquí van a ir las cards de los catálogos. Selecciona el algoritmo
-              que mejor se adapte a tus necesidades.
+              Explora los comandos más importantes de Git. Haz clic en
+              cualquier comando para ver su descripción completa y un diagrama
+              de flujo interactivo.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {algoritmos.map((algoritmo) => (
+            {comandosGit.map((comando) => (
               <Card
-                key={algoritmo.id}
-                title={algoritmo.nombre}
-                description={algoritmo.descripcion}
-                onClick={() => handleAlgoritmoClick(algoritmo.id)}
-                maxDescriptionLength={100}
+                key={comando.id}
+                title={comando.nombre}
+                description={comando.descripcion}
+                onClick={() => handleComandoClick(comando.id)}
+                maxDescriptionLength={120}
                 showViewMore={true}
               />
             ))}
@@ -158,9 +159,9 @@ export const Comenzar = () => {
     <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Comenzar</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">Aprende Git</h1>
           <p className="text-lg text-gray-600">
-            Selecciona cómo deseas continuar
+            Explora comandos o practica con el editor
           </p>
         </div>
 

@@ -16,7 +16,7 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
 
   const navItems = [
     { path: '/', label: 'Inicio' },
-    { path: '/comenzar', label: 'Comenzar' },
+    { path: '/comenzar', label: 'Comandos' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -30,20 +30,15 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <svg
                   className="w-5 h-5 text-white"
-                  fill="none"
-                  stroke="currentColor"
+                  fill="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
+                  <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/>
+                  <path d="M12 6v6l4 2"/>
                 </svg>
               </div>
               <h1 className="text-2xl font-bold text-gray-900">
-                Mi Aplicación
+                Aprende Git
               </h1>
             </Link>
 
@@ -74,8 +69,8 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
       <footer className="bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-6 text-center text-gray-600">
           <p>
-            &copy; {new Date().getFullYear()} Mi Aplicación. Todos los derechos
-            reservados.
+            &copy; {new Date().getFullYear()} Aprende Git. Plataforma educativa
+            de control de versiones.
           </p>
         </div>
       </footer>

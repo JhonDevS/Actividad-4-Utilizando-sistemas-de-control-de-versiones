@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './contexts';
 import { MainLayout } from './layouts';
-import { Home, Comenzar, DetalleAlgoritmo } from './pages';
+import { Home, Comenzar, DetalleAlgoritmo, DetalleComando } from './pages';
 
 /**
  * Componente raíz de la aplicación con enrutamiento
@@ -17,6 +17,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/comenzar" element={<Comenzar />} />
             <Route path="/algoritmo/:id" element={<DetalleAlgoritmo />} />
+            <Route path="/comando/:id" element={<DetalleComando />} />
           </Routes>
         </MainLayout>
       </BrowserRouter>
